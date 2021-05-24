@@ -26,6 +26,7 @@ requirements:
     - robotraconteur
     - robotraconteur_companion
     - gazebo
+    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 about:
   home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin
