@@ -28,6 +28,9 @@ requirements:
     - gazebo
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
+build:
+  number: 2
+
 about:
   home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin
   license: Apache 2.0
