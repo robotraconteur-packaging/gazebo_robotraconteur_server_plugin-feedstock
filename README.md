@@ -33,16 +33,41 @@ conda config --add channels r
 conda config --set channel_priority strict
 ```
 
-Once the `r` channel has been enabled, `gazebo_robotraconteur_server_plugin` can be installed with:
+Once the `r` channel has been enabled, `gazebo_robotraconteur_server_plugin` can be installed with `conda`:
 
 ```
 conda install gazebo_robotraconteur_server_plugin
 ```
 
-It is possible to list all of the versions of `gazebo_robotraconteur_server_plugin` available on your platform with:
+or with `mamba`:
+
+```
+mamba install gazebo_robotraconteur_server_plugin
+```
+
+It is possible to list all of the versions of `gazebo_robotraconteur_server_plugin` available on your platform with `conda`:
 
 ```
 conda search gazebo_robotraconteur_server_plugin --channel r
+```
+
+or with `mamba`:
+
+```
+mamba search gazebo_robotraconteur_server_plugin --channel r
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search gazebo_robotraconteur_server_plugin --channel r
+
+# List packages depending on `gazebo_robotraconteur_server_plugin`:
+mamba repoquery whoneeds gazebo_robotraconteur_server_plugin --channel r
+
+# List dependencies of `gazebo_robotraconteur_server_plugin`:
+mamba repoquery depends gazebo_robotraconteur_server_plugin --channel r
 ```
 
 
