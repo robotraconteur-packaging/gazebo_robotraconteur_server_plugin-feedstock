@@ -8,8 +8,8 @@ source:
 
 requirements:
   host:
-    - robotraconteur >= 0.16.0
-    - robotraconteur_companion >= 0.2.0
+    - robotraconteur >=0.16.0
+    - robotraconteur_companion >=0.2.0
     - gazebo
     - git
     - cmake
@@ -23,8 +23,8 @@ requirements:
     - pkgconfig
   run:
     - boost-cpp
-    - robotraconteur >= 0.16.0
-    - robotraconteur_companion >= 0.2.0
+    - robotraconteur >=0.16.0
+    - robotraconteur_companion >=0.2.0
     - gazebo
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
