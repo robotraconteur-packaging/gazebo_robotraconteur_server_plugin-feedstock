@@ -1,11 +1,11 @@
-About gazebo_robotraconteur_server_plugin
-=========================================
+About gazebo_robotraconteur_server_plugin-feedstock
+===================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/gazebo_robotraconteur_server_plugin-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin
 
 Package license: Apache 2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/gazebo_robotraconteur_server_plugin-feedstock/blob/master/LICENSE.txt)
 
 Summary: Robot Raconteur plugin for the Gazebo Robot Simulator
 
