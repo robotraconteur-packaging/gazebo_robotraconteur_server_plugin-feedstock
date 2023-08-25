@@ -1,10 +1,16 @@
+{% set name = "gazebo_robotraconteur_server_plugin" %}
+{% set version = "0.2.0" %}
+
 package:
-  name: gazebo_robotraconteur_server_plugin
-  version: 0.2.0
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   git_url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin.git
-  git_ref: v0.2.0
+  git_rev: v{{ version }}
+
+build:
+  number: 2
 
 requirements:
   host:
@@ -14,8 +20,8 @@ requirements:
     - git
     - cmake
     - boost-cpp
-    - make # [linux]
-    - ninja # [win]
+    - make  # [linux]
+    - ninja  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - yaml-cpp
@@ -28,10 +34,12 @@ requirements:
     - gazebo
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
-build:
-  number: 1
-
 about:
   home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin
-  license: Apache 2.0
+  license: Apache-2.0
+  license_file: LICENSE.txt
   summary: 'Robot Raconteur plugin for the Gazebo Robot Simulator'
+
+extra:
+  recipe-maintainers:
+    - johnwason
