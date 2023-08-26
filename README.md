@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/robotraconteur/gazebo_robot
 
 Home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Summary: Robot Raconteur plugin for the Gazebo Robot Simulator
 
@@ -98,4 +98,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@johnwason](https://github.com/johnwason/)
 
