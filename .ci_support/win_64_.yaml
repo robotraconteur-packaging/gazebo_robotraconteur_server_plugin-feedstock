@@ -3,7 +3,7 @@ boost_cpp:
 c_compiler:
 - vs2019
 channel_sources:
-- robotraconteur,conda-forge,defaults
+- robotraconteur,conda-forge
 channel_targets:
 - robotraconteur main
 cxx_compiler:
