@@ -10,28 +10,30 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 4
+  number: 5
 
 requirements:
-  host:
-    - robotraconteur >=0.16.0
-    - robotraconteur_companion >=0.2.0
-    - gazebo
+  build:
     - git
     - cmake
-    - boost-cpp
     - make  # [linux]
     - ninja  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+  host:
+    - robotraconteur >=0.18.0
+    - robotraconteur_companion >=0.3.1
+    - gazebo
+    - boost-cpp
     - yaml-cpp
     - eigen
     - pkgconfig
   run:
     - boost-cpp
-    - robotraconteur >=0.16.0
-    - robotraconteur_companion >=0.2.0
+    - robotraconteur >=0.18.0
+    - robotraconteur_companion >=0.3.1
     - gazebo
+    - yaml-cpp
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 about:
