@@ -6,8 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin.git
-  git_rev: v{{ version }}
+  #git_url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin.git
+  #git_rev: v{{ version }}
+  # Use tarball
+  url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin/archive/v{{ version }}.tar.gz
+  sha256: ae75e9f849522d02bdee77d8eea48d4b6cb9056646ea26458f54a08614dfb06f
 
 build:
   number: 5
