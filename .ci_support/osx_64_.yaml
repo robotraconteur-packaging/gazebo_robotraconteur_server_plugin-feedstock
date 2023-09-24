@@ -7,7 +7,7 @@ c_compiler:
 c_compiler_version:
 - '15'
 channel_sources:
-- robotraconteur,conda-forge,defaults
+- robotraconteur,conda-forge
 channel_targets:
 - robotraconteur main
 cxx_compiler:
