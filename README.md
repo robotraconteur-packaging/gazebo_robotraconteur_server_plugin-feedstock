@@ -21,19 +21,19 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-gazebo_robotraconteur_server_plugin-green.svg)](https://anaconda.org/r/gazebo_robotraconteur_server_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/r/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/r/gazebo_robotraconteur_server_plugin) | [![Conda Version](https://img.shields.io/conda/vn/r/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/r/gazebo_robotraconteur_server_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/r/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/r/gazebo_robotraconteur_server_plugin) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gazebo_robotraconteur_server_plugin-green.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Version](https://img.shields.io/conda/vn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) |
 
 Installing gazebo_robotraconteur_server_plugin
 ==============================================
 
-Installing `gazebo_robotraconteur_server_plugin` from the `r` channel can be achieved by adding `r` to your channels with:
+Installing `gazebo_robotraconteur_server_plugin` from the `robotraconteur` channel can be achieved by adding `robotraconteur` to your channels with:
 
 ```
-conda config --add channels r
+conda config --add channels robotraconteur
 conda config --set channel_priority strict
 ```
 
-Once the `r` channel has been enabled, `gazebo_robotraconteur_server_plugin` can be installed with `conda`:
+Once the `robotraconteur` channel has been enabled, `gazebo_robotraconteur_server_plugin` can be installed with `conda`:
 
 ```
 conda install gazebo_robotraconteur_server_plugin
@@ -48,26 +48,26 @@ mamba install gazebo_robotraconteur_server_plugin
 It is possible to list all of the versions of `gazebo_robotraconteur_server_plugin` available on your platform with `conda`:
 
 ```
-conda search gazebo_robotraconteur_server_plugin --channel r
+conda search gazebo_robotraconteur_server_plugin --channel robotraconteur
 ```
 
 or with `mamba`:
 
 ```
-mamba search gazebo_robotraconteur_server_plugin --channel r
+mamba search gazebo_robotraconteur_server_plugin --channel robotraconteur
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search gazebo_robotraconteur_server_plugin --channel r
+mamba repoquery search gazebo_robotraconteur_server_plugin --channel robotraconteur
 
 # List packages depending on `gazebo_robotraconteur_server_plugin`:
-mamba repoquery whoneeds gazebo_robotraconteur_server_plugin --channel r
+mamba repoquery whoneeds gazebo_robotraconteur_server_plugin --channel robotraconteur
 
 # List dependencies of `gazebo_robotraconteur_server_plugin`:
-mamba repoquery depends gazebo_robotraconteur_server_plugin --channel r
+mamba repoquery depends gazebo_robotraconteur_server_plugin --channel robotraconteur
 ```
 
 
@@ -81,8 +81,8 @@ package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
-`r` channel, whereupon the built conda packages will be available for
-everybody to install and use from the `r` channel.
+`robotraconteur` channel, whereupon the built conda packages will be available for
+everybody to install and use from the `robotraconteur` channel.
 Note that all branches in the robotraconteur/gazebo_robotraconteur_server_plugin-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
