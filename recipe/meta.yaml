@@ -13,7 +13,8 @@ source:
   sha256: ae75e9f849522d02bdee77d8eea48d4b6cb9056646ea26458f54a08614dfb06f
 
 build:
-  number: 6
+  number: 7
+
 
 requirements:
   build:
@@ -27,12 +28,11 @@ requirements:
     - robotraconteur >=0.18.0
     - robotraconteur_companion >=0.3.1
     - gazebo
-    - boost-cpp
+    - libboost-devel
     - yaml-cpp
     - eigen
     - pkgconfig
   run:
-    - boost-cpp
     - robotraconteur >=0.18.0
     - robotraconteur_companion >=0.3.1
     - gazebo
