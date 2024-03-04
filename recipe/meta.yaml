@@ -1,19 +1,16 @@
 {% set name = "gazebo_robotraconteur_server_plugin" %}
-{% set version = "0.2.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  #git_url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin.git
-  #git_rev: v{{ version }}
-  # Use tarball
   url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin/archive/v{{ version }}.tar.gz
-  sha256: ae75e9f849522d02bdee77d8eea48d4b6cb9056646ea26458f54a08614dfb06f
+  sha256: a3070be34c9fab1c60502140d5156c47e080779a04cd44015c14c17ea056ac77  
 
 build:
-  number: 8
+  number: 0
 
 
 requirements:
