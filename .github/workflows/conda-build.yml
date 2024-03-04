@@ -3,7 +3,11 @@
 # -*- mode: yaml -*-
 
 name: Build conda package
-on: ['push', 'pull_request']
+on:
+  push:
+
+  pull_request:
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
@@ -36,7 +40,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Build on Linux
       if: matrix.os == 'ubuntu'
