@@ -10,7 +10,7 @@ source:
   sha256: a3070be34c9fab1c60502140d5156c47e080779a04cd44015c14c17ea056ac77  
 
 build:
-  number: 2
+  number: 3
 
 
 requirements:
@@ -29,12 +29,19 @@ requirements:
     - yaml-cpp
     - eigen
     - pkgconfig
+    - libprotobuf
+    - libblas
+    - tinyxml2
   run:
     - robotraconteur >=0.18.0
     - robotraconteur_companion >=0.3.1
     - {{ pin_compatible('gazebo', max_pin='x.x.x', min_pin='x.x.x') }}
     - yaml-cpp
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
+    - libprotobuf
+    - libboost-devel
+    - libblas
+    - tinyxml2
 
 about:
   home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin
