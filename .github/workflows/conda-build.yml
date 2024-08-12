@@ -27,11 +27,22 @@ jobs:
             os: ubuntu
             runs_on: ['ubuntu-latest']
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+          - CONFIG: linux_aarch64_
+            SHORT_CONFIG: linux_aarch64_
+            UPLOAD_PACKAGES: True
+            os: ubuntu
+            runs_on: ['ubuntu-latest']
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
           - CONFIG: osx_64_
             SHORT_CONFIG: osx_64_
             UPLOAD_PACKAGES: True
             os: macos
-            runs_on: ['macos-latest']
+            runs_on: ['macos-13']
+          - CONFIG: osx_arm64_
+            SHORT_CONFIG: osx_arm64_
+            UPLOAD_PACKAGES: True
+            os: macos
+            runs_on: ['macos-14']
           - CONFIG: win_64_
             SHORT_CONFIG: win_64_
             UPLOAD_PACKAGES: True
@@ -40,7 +51,7 @@ jobs:
     steps:
 
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
 
     - name: Build on Linux
       if: matrix.os == 'ubuntu'
@@ -90,10 +101,9 @@ jobs:
         ./.scripts/run_osx_build.sh
 
     - name: Install Miniconda for windows
-      uses: conda-incubator/setup-miniconda@v2
+      uses: conda-incubator/setup-miniconda@a4260408e20b96e80095f42ff7f1a15b27dd94ca # v3.0.4
       with:
         miniforge-version: latest
-        miniforge-variant: Mambaforge
       if: matrix.os == 'windows'
 
     - name: Build on windows
@@ -145,7 +155,7 @@ jobs:
       continue-on-error: true
 
     - name: Store conda build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
       if: ${{ always() && steps.prepare-artifacts.outcome == 'success' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.BLD_ARTIFACT_NAME }}
@@ -154,7 +164,7 @@ jobs:
       continue-on-error: true
 
     - name: Store conda build environment artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
       if: ${{ failure() && steps.prepare-artifacts.outcome == 'success' }}
       with:
         name: ${{ steps.prepare-artifacts.outputs.ENV_ARTIFACT_NAME }}
