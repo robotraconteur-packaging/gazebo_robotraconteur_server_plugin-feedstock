@@ -10,7 +10,7 @@ source:
   sha256: a3070be34c9fab1c60502140d5156c47e080779a04cd44015c14c17ea056ac77  
 
 build:
-  number: 3
+  number: 4
 
 
 requirements:
@@ -21,6 +21,7 @@ requirements:
     - ninja  # [win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - robotraconteur >=0.18.0
     - robotraconteur_companion >=0.3.1
