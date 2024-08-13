@@ -17,11 +17,12 @@ requirements:
   build:
     - git
     - cmake
-    - make  # [linux]
-    - ninja  # [win]
+    - ninja
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - robotraconteur                         # [build_platform != target_platform]
   host:
     - robotraconteur >=0.18.0
     - robotraconteur_companion >=0.3.1
