@@ -7,10 +7,12 @@ package:
 
 source:
   url: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin/archive/v{{ version }}.tar.gz
-  sha256: a3070be34c9fab1c60502140d5156c47e080779a04cd44015c14c17ea056ac77  
+  sha256: a3070be34c9fab1c60502140d5156c47e080779a04cd44015c14c17ea056ac77
+  patches:
+    - cmake_ver.patch
 
 build:
-  number: 4
+  number: 5
 
 
 requirements:

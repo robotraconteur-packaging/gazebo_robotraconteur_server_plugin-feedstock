@@ -21,7 +21,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-gazebo_robotraconteur_server_plugin-green.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Version](https://img.shields.io/conda/vn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gazebo__robotraconteur__server__plugin-green.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Downloads](https://img.shields.io/conda/dn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Version](https://img.shields.io/conda/vn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) | [![Conda Platforms](https://img.shields.io/conda/pn/robotraconteur/gazebo_robotraconteur_server_plugin.svg)](https://anaconda.org/robotraconteur/gazebo_robotraconteur_server_plugin) |
 
 Installing gazebo_robotraconteur_server_plugin
 ==============================================
