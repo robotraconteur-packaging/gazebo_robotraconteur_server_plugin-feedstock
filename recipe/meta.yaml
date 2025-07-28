@@ -12,8 +12,7 @@ source:
     - cmake_ver.patch
 
 build:
-  number: 5
-
+  number: 7
 
 requirements:
   build:
@@ -23,11 +22,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - robotraconteur                         # [build_platform != target_platform]
+    - librobotraconteur                         # [build_platform != target_platform]
   host:
-    - robotraconteur >=0.18.0
-    - robotraconteur_companion >=0.3.1
+    - librobotraconteur >1.2.4
+    - robotraconteur_companion >0.4.1
     - gazebo
     - libboost-devel
     - yaml-cpp
@@ -37,15 +35,8 @@ requirements:
     - libblas
     - tinyxml2
   run:
-    - robotraconteur >=0.18.0
-    - robotraconteur_companion >=0.3.1
     - {{ pin_compatible('gazebo', max_pin='x.x.x', min_pin='x.x.x') }}
-    - yaml-cpp
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
-    - libprotobuf
-    - libboost-devel
-    - libblas
-    - tinyxml2
 
 about:
   home: https://github.com/robotraconteur-contrib/RobotRaconteur_Gazebo_Server_Plugin

@@ -9,7 +9,7 @@ cd build2
 if [[ "$OSTYPE" == "darwin"* ]]; then
 export CXXFLAGS="${CXXFLAGS} -DBOOST_ASIO_DISABLE_STD_ALIGNED_ALLOC"
 fi
-cmake -GNinja -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE:STRING=Release ${CMAKE_ARGS} ..
+cmake -GNinja ${CMAKE_ARGS} ..
 
 
 cmake --build . --config Release -- -j$CPU_COUNT
