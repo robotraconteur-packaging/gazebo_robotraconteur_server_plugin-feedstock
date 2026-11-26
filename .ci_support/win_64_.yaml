@@ -1,5 +1,7 @@
 c_compiler:
-- vs2022
+- vs
+c_compiler_version:
+- '2022'
 c_stdlib:
 - vs
 channel_sources:
@@ -7,13 +9,15 @@ channel_sources:
 channel_targets:
 - robotraconteur main
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 libblas:
 - 3.9.* *netlib
 libboost_devel:
-- '1.86'
+- '1.90'
 libprotobuf:
-- 5.29.3
+- 7.35.1
 target_platform:
 - win-64
 tinyxml2:

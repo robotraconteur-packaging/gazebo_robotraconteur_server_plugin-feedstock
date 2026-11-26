@@ -13,7 +13,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/robotraconteur/gazebo_robotraconteur_server_plugin-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/robotraconteur/gazebo_robotraconteur_server_plugin-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
@@ -33,31 +40,73 @@ conda config --add channels robotraconteur
 conda config --set channel_priority strict
 ```
 
-Once the `robotraconteur` channel has been enabled, `gazebo_robotraconteur_server_plugin` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install gazebo_robotraconteur_server_plugin
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install gazebo_robotraconteur_server_plugin
 ```
 
-It is possible to list all of the versions of `gazebo_robotraconteur_server_plugin` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add gazebo_robotraconteur_server_plugin
+# for installing globally
+pixi global install gazebo_robotraconteur_server_plugin
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `gazebo_robotraconteur_server_plugin` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search gazebo_robotraconteur_server_plugin --channel robotraconteur
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search gazebo_robotraconteur_server_plugin --channel robotraconteur
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search gazebo_robotraconteur_server_plugin --channel robotraconteur
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -69,6 +118,8 @@ mamba repoquery whoneeds gazebo_robotraconteur_server_plugin --channel robotraco
 # List dependencies of `gazebo_robotraconteur_server_plugin`:
 mamba repoquery depends gazebo_robotraconteur_server_plugin --channel robotraconteur
 ```
+
+</details>
 
 
 
@@ -85,7 +136,7 @@ merged, the recipe will be re-built and uploaded automatically to the
 everybody to install and use from the `robotraconteur` channel.
 Note that all branches in the robotraconteur/gazebo_robotraconteur_server_plugin-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
-on branches in forks and branches in the main repository should only be used to
+on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:

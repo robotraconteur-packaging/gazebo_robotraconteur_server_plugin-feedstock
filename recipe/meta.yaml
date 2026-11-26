@@ -12,7 +12,7 @@ source:
     - cmake_ver.patch
 
 build:
-  number: 7
+  number: 8
 
 requirements:
   build:
@@ -22,10 +22,10 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - librobotraconteur                         # [build_platform != target_platform]
+    - librobotraconteur >=1.3.0                 # [build_platform != target_platform]
   host:
-    - librobotraconteur >1.2.4
-    - robotraconteur_companion >0.4.1
+    - librobotraconteur >=1.3.0
+    - robotraconteur_companion >=0.4.4
     - gazebo
     - libboost-devel
     - yaml-cpp
